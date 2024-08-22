@@ -1,13 +1,14 @@
+
 import React, { useState } from 'react'
 import { DUMMY_POSTS } from '../data'
 
 import PostItem from '../components/PostItem'
 
-const AuthorPost = () => {
+const CategoryPosts = () => {
   const [posts,setPost]= useState(DUMMY_POSTS)
 
   return (
-    <section className='posts'>
+    <section>
       {posts.length>0?<div className="container post_container">
       {
              posts.map(post => (
@@ -27,4 +28,4 @@ const AuthorPost = () => {
   )
 }
 
-export default AuthorPost
+export default CategoryPosts;

@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
+import PostItem from './PostItem'
+import thumbnail1 from '../images/thumbnail1.jpg'
+
 import { DUMMY_POSTS } from '../data'
 
-import PostItem from '../components/PostItem'
 
-const AuthorPost = () => {
-  const [posts,setPost]= useState(DUMMY_POSTS)
-
+const Post = () => {
+    const [posts,setPosts] =useState(DUMMY_POSTS);
   return (
     <section className='posts'>
       {posts.length>0?<div className="container post_container">
@@ -27,4 +28,4 @@ const AuthorPost = () => {
   )
 }
 
-export default AuthorPost
+export default Post

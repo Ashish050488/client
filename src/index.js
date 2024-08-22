@@ -9,12 +9,12 @@ import PostDetails from './pages/PostDetails'
 import Login from './pages/Login'
 import Logout from './pages/Logout'
 import Register from './pages/Register'
-import UserProfile from './pages/UserProfile'
 import EditPost from './pages/EditPost'
+import UserProfile from './pages/UserProfile';
 import CreatePost from './pages/CreatePost'
 import DeletePost from './pages/DeletePost'
 import Dashboard from './pages/Dashboard'
-import Category from './pages/Category'
+import CategoryPosts from './pages/CategoryPosts'
 import Authors from './pages/Authors'
 import AuthorPost from './pages/AuthorPost'
 
@@ -33,10 +33,11 @@ const router = createBrowserRouter([
       {path:'/profile/:id',element:<UserProfile/>},
       {path:'/authors',element:<Authors/>},
       {path:'/create',element:<CreatePost/>},
-      {path:'/post/categories/:category',element:<Category/>},
-      {path:'/post/:id/edit',element:<EditPost/>},
-      {path:'/post/users/:id',element:<AuthorPost/>},
-      {path:'/myposts/:id',element:<EditPost/>},
+      {path:'/post/categories/:category',element:<CategoryPosts/>},
+      {path:`/posts/:id/edit`,element:<EditPost/>},
+      {path:'/posts/:id/delete',element:<DeletePost/>},
+      {path:'/posts/users/:id',element:<AuthorPost/>},
+      {path:'/myposts/:id',element:<Dashboard/>},
       {path:'/logour',element:<Logout/>},
       
     ]
